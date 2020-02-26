@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: rechnungskorrektur-backend
+  kafka:
+    bootstrap-servers: localhost:9092
+    streams:
+      stateDir: ${HOME}/kafka/rechnungskorrektur-backend
+      properties:
+        application.server: localhost:8080
+        processing.guarantee: exactly_once
+  thymeleaf:
+    cache: true
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    suffix: .xml
+    servlet:
+      content-type: text/xml
+    mode: XML
+logging:
+  level:
+    org.springframework: error
+    de.vkb.rechnungskorrektur: trace
+---
+spring:
+  profiles: test
+  kafka:
+    bootstrap-servers: ${spring.embedded.kafka.brokers}

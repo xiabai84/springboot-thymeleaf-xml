@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<COMPANIES xmlns:th="http://www.thymeleaf.org">
+    <COMPANY>
+        <NAME th:text="${company['uuid']}"/>
+        <ADDRESS th:text="${company['address']}"/>
+    </COMPANY>
+</COMPANIES>
