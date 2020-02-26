@@ -1,2 +1,2 @@
-# rechnungskorrektur-backend
-demo program for generating xml format
+# convert data to xml format
+demo program for generating xml format and provide rest service
